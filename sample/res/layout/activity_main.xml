@@ -1,0 +1,81 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".CircularProgressBarSample">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/zero"
+        android:layout_below="@+id/auto_animate_switch"
+        android:layout_centerHorizontal="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/bg"
+            android:gravity="center">
+
+            <com.pascalwelsch.holocircularprogressbar.HoloCircularProgressBar
+                android:id="@+id/holoCircularProgressBar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:padding="100dp"
+                app:marker_progress="0.8"
+                app:marker_progress_color="#fde43e"
+                app:marker_progress_text="保级"
+                app:marker_progress_textSize="15sp"
+                app:marker_visible="true"
+                app:progress="0.3"
+                app:progress_background_color="#FFADA5"
+                app:progress_color="@android:color/white"
+                app:stroke_width="12px"
+                app:thumb_stroke_color="#FFA8A9"
+                app:thumb_stroke_text="白金卡"
+                app:thumb_stroke_textSize="15sp"
+                app:thumb_visible="true" />
+        </LinearLayout>
+    </ScrollView>
+
+
+    <Button
+        android:id="@+id/zero"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:text="0" />
+
+    <Button
+        android:id="@+id/one"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/zero"
+        android:layout_alignBottom="@+id/zero"
+        android:layout_toRightOf="@+id/zero"
+        android:text="1" />
+
+    <Switch
+        android:id="@+id/auto_animate_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:text="Auto animation"
+        tools:ignore="NewApi" />
+
+    <Button
+        android:id="@+id/random_color"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:text="@string/random_color" />
+
+</RelativeLayout>

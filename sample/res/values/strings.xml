@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">CircularProgressBarSample</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="switch_theme">Switch theme</string>
+    <string name="random_color">random color</string>
+    <string name="open">drawer_open</string>
+    <string name="close">drawer_close</string>
+</resources>

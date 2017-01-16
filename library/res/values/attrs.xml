@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="HoloCircularProgressBar">
+        <attr name="stroke_width" format="dimension" />
+        <attr name="progress" format="float" />
+        <attr name="marker_progress" format="float" />
+        <attr name="marker_progress_text" format="string" />
+        <attr name="marker_progress_textSize" format="dimension" />
+        <attr name="marker_progress_color" format="color"/>
+        <attr name="progress_color" format="color" />
+        <attr name="progress_background_color" format="color" />
+        <attr name="thumb_stroke_color" format="color"/>
+        <attr name="thumb_stroke_text" format="string"/>
+        <attr name="thumb_stroke_textSize" format="dimension" />
+        <attr name="thumb_visible" format="boolean" />
+        <attr name="marker_visible" format="boolean" />
+        <attr name="android:gravity" />
+
+    </declare-styleable>
+
+    <attr name="circularProgressBarStyle" format="reference" />
+
+</resources>

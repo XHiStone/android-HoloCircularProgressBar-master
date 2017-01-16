@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00000000"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dialog_sign_bg">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginBottom="40dp">
+
+            <TextView
+                android:id="@+id/tv_sing_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="40dp"
+                android:textColor="#fd3651"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/btn_sing_ok"
+                android:layout_width="152dp"
+                android:layout_height="42dp"
+                android:layout_below="@id/tv_sing_tip"
+                android:background="@drawable/sign_dialog_btn_shape"
+                android:text="确定"
+                android:textColor="@android:color/white"
+                android:textSize="14sp" />
+
+        </RelativeLayout>
+
+    </FrameLayout>
+
+
+</LinearLayout>

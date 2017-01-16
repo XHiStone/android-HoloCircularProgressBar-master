@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="15dp"
+    android:background="@drawable/barcode_dialog_bg_shape"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/img_dialog_bar"
+            android:layout_width="310dp"
+            android:layout_height="64dp"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/dialog_bar_code"
+            android:scaleType="centerInside"
+             />
+
+        <TextView
+            android:id="@+id/tv_dialog_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:lines="1"
+            android:text="0000 0000 0000 00000"
+            android:textColor="@android:color/black" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/qrcode_dialog_bg_shape"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/img_dialog_qrcode"
+            android:layout_width="230dp"
+            android:src="@drawable/dialog_qr_code"
+            android:layout_height="230dp"
+            android:layout_margin="10dp"
+            android:scaleType="centerInside"
+             />
+    </LinearLayout>
+</LinearLayout>
