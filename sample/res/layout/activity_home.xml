@@ -123,20 +123,20 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="0dp"
+                        android:layout_gravity="center|bottom"
                         android:layout_weight="1"
                         android:paddingTop="5dp"
-                        android:layout_gravity="center|bottom"
-                        android:textColor="#FFD7DA"
                         android:text="可用积分"
+                        android:textColor="#FFD7DA"
                         android:textSize="14sp" />
 
                     <TextView
                         android:id="@+id/tv_integral_num"
                         android:layout_width="wrap_content"
                         android:layout_height="0dp"
-                        android:layout_weight="1"
                         android:layout_gravity="center|bottom"
                         android:layout_marginTop="4dp"
+                        android:layout_weight="1"
                         android:text="8980"
                         android:textColor="@android:color/white"
                         android:textSize="45sp" />
@@ -156,6 +156,7 @@
                     app:thumb_stroke_color="#FFA8A9"
                     app:thumb_stroke_textSize="12sp"
                     app:thumb_visible="true" />
+
                 <com.john.waveview.WaveView
                     android:id="@+id/wave_view"
                     android:layout_width="match_parent"
@@ -164,10 +165,10 @@
                     android:background="#00000000"
                     app:above_wave_color="@android:color/white"
                     app:blow_wave_color="@android:color/white"
-                    app:wave_progress="100"
                     app:wave_height="large"
                     app:wave_hz="slow"
-                    app:wave_length="middle" />
+                    app:wave_length="middle"
+                    app:wave_progress="100" />
             </FrameLayout>
 
             <ImageView
@@ -301,14 +302,17 @@
                     android:layout_marginLeft="20dp"
                     android:src="@drawable/home_msg" />
 
-                <TextView
+                <ViewFlipper
+                    android:id="@+id/vf"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="15dp"
-                    android:gravity="center_vertical"
-                    android:text="您参与的报名活动100积分已经到账"
-                    android:textColor="#555"
-                    android:textSize="12sp" />
+                    android:layout_gravity="center"
+                    android:layout_margin="15dp"
+                    android:autoStart="true"
+                    android:background="#fff"
+                    android:flipInterval="3000"
+                    android:inAnimation="@anim/anim_marquee_in"
+                    android:outAnimation="@anim/anim_marquee_out" />
 
             </LinearLayout>
 

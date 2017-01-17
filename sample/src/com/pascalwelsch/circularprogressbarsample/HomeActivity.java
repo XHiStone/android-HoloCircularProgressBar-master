@@ -16,6 +16,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.ViewFlipper;
 
 import com.nineoldandroids.view.ViewHelper;
 import com.pascalwelsch.holocircularprogressbar.HoloCircularProgressBar;
@@ -37,6 +38,7 @@ public class HomeActivity extends FragmentActivity {
     ImageView imageView;
     TextView tv_num;
     HoloCircularProgressBar holoCircularProgressBar;
+    ViewFlipper viewFlipper;
     float integral = 0;
     private ObjectAnimator mProgressBarAnimator;
 
@@ -45,6 +47,15 @@ public class HomeActivity extends FragmentActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         drawerLayout = (DrawerLayout) findViewById(R.id.drawerLayout);
+        viewFlipper = (ViewFlipper) findViewById(R.id.vf);
+        View view = View.inflate(this, R.layout.layout_roll_msg, null);
+        View view1 = View.inflate(this, R.layout.layout_roll_msg, null);
+        viewFlipper.addView(view);
+        viewFlipper.addView(view1);
+        TextView tv = (TextView) view.findViewById(R.id.tv_home_msg);
+        TextView tv1 = (TextView) view1.findViewById(R.id.tv_home_msg);
+        tv.setText("您参与的报名活动200积分已经到账");
+        tv1.setText(tv.getText().toString());
         imageView = (ImageView) findViewById(R.id.img_menu);
 //        setDrawerLeftEdgeSize(this, drawerLayout, 0.1f);
         ImageView sign = (ImageView) findViewById(R.id.img_home_sign);
@@ -133,7 +144,7 @@ public class HomeActivity extends FragmentActivity {
             @Override
             public void onAnimationUpdate(final ValueAnimator animation) {
                 progressBar.setProgress((Float) animation.getAnimatedValue());
-                tv_num.setText("" + (int)((Float) animation.getAnimatedValue() * (898 / 0.6)));
+                tv_num.setText("" + (int) ((Float) animation.getAnimatedValue() * (898 / 0.6)));
             }
         });
 //        progressBar.setMarkerProgress(progress);
