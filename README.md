@@ -1,3 +1,3 @@
 # android-HoloCircularProgressBar-master
 动态积分圆进度条
-![name](https://github.com/18337129968/android-HoloCircularProgressBar-master/blob/master/progress.gif)<br>
+![image](https://github.com/18337129968/android-HoloCircularProgressBar-master/blob/master/progress.gif)<br>
