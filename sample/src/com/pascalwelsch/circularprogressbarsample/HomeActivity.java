@@ -39,7 +39,7 @@ public class HomeActivity extends FragmentActivity {
     TextView tv_num;
     HoloCircularProgressBar holoCircularProgressBar;
     ViewFlipper viewFlipper;
-    float integral = 0;
+    float integral = 0.2f;
     private ObjectAnimator mProgressBarAnimator;
 
     @Override
@@ -65,7 +65,7 @@ public class HomeActivity extends FragmentActivity {
 
         holoCircularProgressBar.setMarkerProgress(0.8f);
         holoCircularProgressBar.setMarkerProgressText("保级");
-        animate(holoCircularProgressBar, null, 0.6f, 1000);
+        animate(holoCircularProgressBar, null, integral, 1000);
 
         final SignDialog dialog = new SignDialog(this);
         final QRCodeDialog qrCodeDialog = new QRCodeDialog(this);
