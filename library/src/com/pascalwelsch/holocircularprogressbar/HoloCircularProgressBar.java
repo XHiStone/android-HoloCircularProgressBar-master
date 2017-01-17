@@ -735,6 +735,7 @@ public class HoloCircularProgressBar extends View {
         mProgressColorPaint.setColor(mProgressColor);
         mProgressColorPaint.setStyle(Paint.Style.STROKE);
         mProgressColorPaint.setStrokeWidth(mCircleStrokeWidth);
+        mProgressColorPaint.setStrokeCap(Paint.Cap.ROUND);
 
         mThumbColorPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
         mThumbColorPaint.setColor(mProgressColor);
