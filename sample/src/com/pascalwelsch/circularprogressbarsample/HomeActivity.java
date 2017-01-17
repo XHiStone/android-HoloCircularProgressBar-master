@@ -86,6 +86,7 @@ public class HomeActivity extends FragmentActivity {
             }
         });
 
+
         dialog.setOnSignListener(new SignDialog.OnSignListener() {
             @Override
             public void onClick() {
